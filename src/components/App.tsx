@@ -1,5 +1,5 @@
 import './App.css';
-import { MAIN_ROUTE, LOGIN_ROUTE, REGISTER_ROUTE } from '../utils/url';
+import { MAIN_ROUTE, LOGIN_ROUTE, REGISTER_ROUTE, INVOICE_ROUTE } from '../utils/url';
 import {Route,Switch,BrowserRouter} from 'react-router-dom';
 import LoginForm from './login/loginForm';
 import React from 'react';
@@ -14,6 +14,7 @@ function App() {
         </Route>
         <Route redirectToLogin={false} exact={true} path={LOGIN_ROUTE} component={LoginForm} />
         <Route redirectToLogin={false} path={REGISTER_ROUTE} component={RegisterForm} />
+        <Route redirectToLogin={false} path={INVOICE_ROUTE} component={Invoice} />
       </Switch>
     </BrowserRouter>
   );
